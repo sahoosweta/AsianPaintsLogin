@@ -47,8 +47,8 @@ class LoginPageClass:
 
     def click_submit1_button(self):
         submitButton1=self.driver.find_element(By.XPATH,self.submitButtonElement1)
-        #submitButton1.click()
-        submitButton1.send_keys(Keys.ENTER)
+        submitButton1.click()
+        
 
 
     def signedIn(self):
