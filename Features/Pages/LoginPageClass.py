@@ -1,6 +1,9 @@
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+
 from DataFiles import ExcelUtils
 from Features.Utility.ConfigClass import ConfigClass
+
 class LoginPageClass:
 
     def __init__(self, driver):
@@ -44,7 +47,9 @@ class LoginPageClass:
 
     def click_submit1_button(self):
         submitButton1=self.driver.find_element(By.XPATH,self.submitButtonElement1)
-        submitButton1.click()
+        #submitButton1.click()
+        submitButton1.send_keys(Keys.ENTER)
+
 
     def signedIn(self):
         loging=self.driver.find_element(By.XPATH,self.loggedinIcon)
